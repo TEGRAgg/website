@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/unifont@5.0.11/index.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>tegra</title>
+<style>
+@keyframes flicker {
+  0% {
+    opacity: 0.27861;
+  }
+  5% {
+    opacity: 0.34769;
+  }
+  10% {
+    opacity: 0.23604;
+  }
+  15% {
+    opacity: 0.90626;
+  }
+  20% {
+    opacity: 0.18128;
+  }
+  25% {
+    opacity: 0.83891;
+  }
+  30% {
+    opacity: 0.65583;
+  }
+  35% {
+    opacity: 0.67807;
+  }
+  40% {
+    opacity: 0.26559;
+  }
+  45% {
+    opacity: 0.84693;
+  }
+  50% {
+    opacity: 0.96019;
+  }
+  55% {
+    opacity: 0.08594;
+  }
+  60% {
+    opacity: 0.20313;
+  }
+  65% {
+    opacity: 0.71988;
+  }
+  70% {
+    opacity: 0.53455;
+  }
+  75% {
+    opacity: 0.37288;
+  }
+  80% {
+    opacity: 0.71428;
+  }
+  85% {
+    opacity: 0.70419;
+  }
+  90% {
+    opacity: 0.7003;
+  }
+  95% {
+    opacity: 0.36108;
+  }
+  100% {
+    opacity: 0.24387;
+  }
+}
+@keyframes textShadow {
+  0% {
+    text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  5% {
+    text-shadow: 2.7928974010788217px 0 1px rgba(0,30,255,0.5), -2.7928974010788217px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  10% {
+    text-shadow: 0.02956275843481219px 0 1px rgba(0,30,255,0.5), -0.02956275843481219px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  15% {
+    text-shadow: 0.40218538552878136px 0 1px rgba(0,30,255,0.5), -0.40218538552878136px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  20% {
+    text-shadow: 3.4794037899852017px 0 1px rgba(0,30,255,0.5), -3.4794037899852017px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  25% {
+    text-shadow: 1.6125630401149584px 0 1px rgba(0,30,255,0.5), -1.6125630401149584px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  30% {
+    text-shadow: 0.7015590085143956px 0 1px rgba(0,30,255,0.5), -0.7015590085143956px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  35% {
+    text-shadow: 3.896914047650351px 0 1px rgba(0,30,255,0.5), -3.896914047650351px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  40% {
+    text-shadow: 3.870905614848819px 0 1px rgba(0,30,255,0.5), -3.870905614848819px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  45% {
+    text-shadow: 2.231056963361899px 0 1px rgba(0,30,255,0.5), -2.231056963361899px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  50% {
+    text-shadow: 0.08084290417898504px 0 1px rgba(0,30,255,0.5), -0.08084290417898504px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  55% {
+    text-shadow: 2.3758461067427543px 0 1px rgba(0,30,255,0.5), -2.3758461067427543px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  60% {
+    text-shadow: 2.202193051050636px 0 1px rgba(0,30,255,0.5), -2.202193051050636px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  65% {
+    text-shadow: 2.8638780614874975px 0 1px rgba(0,30,255,0.5), -2.8638780614874975px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  70% {
+    text-shadow: 0.48874025155497314px 0 1px rgba(0,30,255,0.5), -0.48874025155497314px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  75% {
+    text-shadow: 1.8948491305757957px 0 1px rgba(0,30,255,0.5), -1.8948491305757957px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  80% {
+    text-shadow: 0.0833037308038857px 0 1px rgba(0,30,255,0.5), -0.0833037308038857px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  85% {
+    text-shadow: 0.09769827255241735px 0 1px rgba(0,30,255,0.5), -0.09769827255241735px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  90% {
+    text-shadow: 3.443339761481782px 0 1px rgba(0,30,255,0.5), -3.443339761481782px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  95% {
+    text-shadow: 2.1841838852799786px 0 1px rgba(0,30,255,0.5), -2.1841838852799786px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  100% {
+    text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+}
+.crt::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+}
+.crt::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+.crt {
+  animation: textShadow 1.6s infinite;
+}
+</style>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Unifont', monospace;
+            background-color: black;
+            color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        span {
+          margin-top: 20px;
+        }
+
+        input {
+            margin-top: 20px;
+            font-family: 'Unifont', monospace;
+            margin-left: 6px;
+        }
+
+        #terminal {
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            position: relative;
+        }
+        #terminal::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+        #input-line {
+            display: flex;
+            align-items: center;
+        }
+        #prompt {
+            margin-top: 10px;
+            color: #1EA527;
+            margin-right: 10px;
+        }
+        #input {
+            margin-top: 12px;
+            flex-grow: 1;
+            background: none;
+            border: none;
+            color: #f0f0f0;
+            font-family: 'Unifont', monospace;
+            font-size: 16px;
+            outline: none;
+        }
+        .output {
+            margin-top: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .output.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #predictions {
+            color: #888;
+            margin-top: 5px;
+        }
+        .error {
+            color: #ff4444;
+        }
+        .card {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 5px;
+            border: 1px solid #1EA527;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .card.selected {
+            background-color: #1EA527;
+            color: black;
+        }
+        .hidden {
+            display: none;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .fade-out {
+            animation: fadeOut 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; transform: translateY(0); }
+            to { opacity: 0; transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body class="crt">
+    <div id="terminal" class="pb-16">
+        <pre>
+             __                       
+            / /____  ____ __________ _
+           / __/ _ \/ __ `/ ___/ __ `/
+          / /_/  __/ /_/ / /  / /_/ / 
+          \__/\___/\__, /_/   \__,_/  
+                  /____/              
+
+
+            TEGRA Industries, LLC.
+          To get started, type "help"
+
+        </pre>
+        <div id="output"></div>
+        <div id="input-line">
+            <span id="prompt">[ shell@tegra ] ~</span>
+            <input type="text" id="input" autofocus>
+        </div>
+        <div id="predictions"></div>
+    </div>
+    <div class="mb-16"></div>
+    <div class="fixed bottom-0 left-0 z-50 grid w-full h-16 grid-cols-1 px-8 md:grid-cols-2">
+        <div class="items-center justify-center hidden text-neutral-500 me-auto md:flex">
+            <span class="text-md mb-8" id="time">-</span>
+        </div>
+        <div class="items-center justify-center hidden ms-auto md:flex">
+            <a href="https://app.tegra.gg" class="text-[#1499B6] mb-2">[ DASHBOARD ]</a>
+        </div>
+    </div>
+
+    <script>
+        const input = document.getElementById('input');
+        const output = document.getElementById('output');
+        const predictions = document.getElementById('predictions');
+        const prompt = document.getElementById('prompt');
+        const inputLine = document.getElementById('input-line');
+
+        let isPromptActive = false;
+
+        const commands = {
+            help: () => '[ ' + new Date().toLocaleString() + ' ] ' + 'Available commands:\n\n' +
+                '― help    : Display this help message\n' +
+                '― about   : About TEGRA\n' +
+                '― status  : Check server status\n' +
+                '― plans   : View server plans.\n' +
+                '― start   : Join TEGRA.\n' +
+                '― contact : Contact support',
+            about: () => '[ ' + new Date().toLocaleString() + ' ] ' + 'TEGRA is a small free 24/7 host for Minecraft, Node.js, and more, based in the US. We provide free yet reliable hosting solutions for your projects. We also keep all of our code open-source, you can see it at https://github.com/TEGRAgg',
+            status: () => '[ ' + new Date().toLocaleString() + ' ] ' + 'All systems operational. Network uptime: 99.92491%.',
+            plans: () => '[ ' + new Date().toLocaleString() + ' ] ' + 'Hosting plans:\n\n' +
+                '1. None. We are free, and we use a scalable resources system so that you can upgrade your servers for free.',
+            start: () => '[ ' + new Date().toLocaleString() + ' ] ' + 'Ah, that one is easy. Just go to https://app.tegra.gg/ and click the big Login with Discord button. If you need support, have a look at the support command.',
+            contact: () => '[ ' + new Date().toLocaleString() + ' ] ' + 'For support, please email us at support@tegra.gg or join our Discord server: discord.gg/tegra'
+        };
+
+        const commandList = Object.keys(commands);
+
+        async function executeCommand(command) {
+            const [cmd, ...args] = command.split(' ');
+            if (commands[cmd]) {
+                const result = await commands[cmd](args);
+                return result;
+            } else {
+                throw new Error(`Command not found: ${cmd}`);
+            }
+        }
+
+        function displayOutput(text, isError = false) {
+            const outputElement = document.createElement('div');
+            outputElement.innerHTML = parseColorCodes(text);
+            outputElement.classList.add('output');
+            if (isError) outputElement.classList.add('error');
+            output.appendChild(outputElement);
+            setTimeout(() => outputElement.classList.add('visible'), 10);
+            output.scrollTop = output.scrollHeight;
+        }
+
+        function parseColorCodes(text) {
+            const colorMap = {
+                '&0': '#000000', '&1': '#0000AA', '&2': '#00AA00', '&3': '#00AAAA',
+                '&4': '#AA0000', '&5': '#AA00AA', '&6': '#FFAA00', '&7': '#AAAAAA',
+                '&8': '#555555', '&9': '#5555FF', '&a': '#55FF55', '&b': '#55FFFF',
+                '&c': '#FF5555', '&d': '#FF55FF', '&e': '#FFFF55', '&f': '#FFFFFF',
+            };
+
+            return text.replace(/&[0-9a-f]/g, match => `</span><span style="color: ${colorMap[match]}">`)
+                       .replace(/\n/g, '<br>')
+                       + '</span>';
+        }
+
+        function setTime() {
+            const el = document.getElementById('time');
+            const date = new Date().toLocaleString();
+
+            el.innerHTML = '[ ' + date + ' ] © TEGRA Industries, LLC.';
+        }
+
+        setInterval(setTime, 100);
+
+        function updatePredictions() {
+            const inputText = input.value.toLowerCase();
+            const matchedCommands = commandList.filter(cmd => cmd.startsWith(inputText));
+            predictions.textContent = matchedCommands.join(' ');
+        }
+
+        input.addEventListener('keyup', async (e) => {
+            if (e.key === 'Enter') {
+                const command = input.value;
+                displayOutput(`> ${command}`);
+                try {
+                    const result = await executeCommand(command);
+                    displayOutput(result);
+                } catch (error) {
+                    displayOutput(error.message, true);
+                }
+                input.value = '';
+                predictions.textContent = '';
+            } else {
+                updatePredictions();
+            }
+        });
+
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                e.preventDefault();
+                const inputText = input.value.toLowerCase();
+                const matchedCommands = commandList.filter(cmd => cmd.startsWith(inputText));
+                if (matchedCommands.length === 1) {
+                    input.value = matchedCommands[0];
+                }
+            }
+        });
+
+        function hideMainPrompt() {
+            if (!isPromptActive) {
+                isPromptActive = true;
+                inputLine.classList.add('fade-out');
+                predictions.classList.add('fade-out');
+                setTimeout(() => {
+                    inputLine.style.opacity = "0";
+                    predictions.style.opacity = "0";
+                    inputLine.classList.remove('fade-out');
+                    predictions.classList.remove('fade-out');
+                }, 500);
+            }
+        }
+
+        function showMainPrompt() {
+            if (isPromptActive) {
+                isPromptActive = false;
+                inputLine.style.opacity = "1";
+                predictions.style.opacity = "1";
+                inputLine.classList.add('fade-in');
+                predictions.classList.add('fade-in');
+                setTimeout(() => {
+                    inputLine.classList.remove('fade-in');
+                    predictions.classList.remove('fade-in');
+                }, 500);
+                input.focus();
+            }
+        }
+
+        function promptUser(question) {
+            return new Promise((resolve) => {
+                const inputLine = document.createElement('div');
+                inputLine.classList.add('fade-in');
+                const promptSpan = document.createElement('span');
+                const inputField = document.createElement('input');
+
+                promptSpan.textContent = question;
+                promptSpan.style.marginTop = '10px'
+                inputField.style.marginTop = '10px'
+                inputField.style.marginLeft = '5px'
+                inputField.type = 'text';
+                inputField.className = 'input';
+                inputField.style.background = 'transparent';
+                inputField.style.border = 'none';
+                inputField.style.outline = 'none';
+                inputField.style.color = 'white';
+                inputField.placeholder = '. . .';
+
+                inputLine.appendChild(promptSpan);
+                inputLine.appendChild(inputField);
+                output.appendChild(inputLine);
+
+                inputField.focus();
+
+                inputField.addEventListener('keyup', function onEnter(e) {
+                    if (e.key === 'Enter') {
+                        const response = inputField.value;
+                        inputField.removeEventListener('keyup', onEnter);
+                        inputLine.classList.add('fade-out');
+                        setTimeout(() => {
+                            inputLine.remove();
+                            resolve(response);
+                        }, 500);
+                    }
+                });
+            });
+        }
+
+        function promptSelection(question, options) {
+            return new Promise((resolve) => {
+                const inputLine = document.createElement('div');
+                inputLine.classList.add('fade-in');
+                const promptSpan = document.createElement('span');
+                promptSpan.textContent = question;
+                inputLine.appendChild(promptSpan);
+
+                options.forEach(option => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.textContent = option.name;
+                    card.onclick = () => {
+                        inputLine.classList.add('fade-out');
+                        setTimeout(() => {
+                            inputLine.remove();
+                            resolve(option.value);
+                        }, 500);
+                    };
+                    inputLine.appendChild(card);
+                });
+
+                output.appendChild(inputLine);
+            });
+        }
+
+        function promptNumber(question, min, max) {
+            return new Promise((resolve) => {
+                const inputLine = document.createElement('div');
+                inputLine.classList.add('fade-in');
+                const promptSpan = document.createElement('span');
+                const inputField = document.createElement('input');
+
+                promptSpan.textContent = question;
+                inputField.type = 'number';
+                inputField.min = min;
+                inputField.max = max;
+                inputField.className = 'input-field';
+                inputField.style.background = 'transparent';
+                inputField.style.border = 'none';
+                inputField.style.outline = 'none';
+                inputField.style.color = 'white';
+
+                inputLine.appendChild(promptSpan);
+                inputLine.appendChild(inputField);
+                output.appendChild(inputLine);
+
+                inputField.focus();
+
+                inputField.addEventListener('keyup', function onEnter(e) {
+                    if (e.key === 'Enter') {
+                        const value = parseInt(inputField.value);
+                        if (value >= min && value <= max) {
+                            inputField.removeEventListener('keyup', onEnter);
+                            inputLine.classList.add('fade-out');
+                            setTimeout(() => {
+                                inputLine.remove();
+                                resolve(value);
+                            }, 500);
+                        } else {
+                            displayOutput(`Invalid input. Please enter a number between ${min} and ${max}.`, true);
+                        }
+                    }
+                });
+            });
+        }
+
+        // Initial focus
+        input.focus();
+    </script>
+</body>
+</html>
